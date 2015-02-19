@@ -1,0 +1,34 @@
+{
+  "name": "mg-sample-extension",
+  "version": "0.0.0",
+  "authors": [
+    "Dan de Havilland <dan@dandehavilland.com>"
+  ],
+  "description": "An example of how to extend metrics-graphics",
+  "keywords": [
+    "metrics-graphics",
+    "extension"
+  ],
+  "license": "MIT",
+  "ignore": [
+    ".DS_Store",
+    ".git",
+    ".gitignore",
+    "dev",
+    "gulp",
+    "gulpfile.js",
+    "index.js",
+    "node_modules",
+    "package.json",
+    "src",
+    "testem.json",
+    "tests"
+  ],
+  "devDependencies": {
+    "metrics-graphics": "git://github.com/dandehavilland/metrics-graphics.git#hooks",
+    "qunit": "~1.17.1",
+    "font-awesome": "~4.3.0",
+    "bootstrap": "~3.3.2",
+    "ace-builds": "~1.1.8"
+  }
+}

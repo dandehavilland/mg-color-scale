@@ -1,10 +1,10 @@
 {
-  "name": "mg-sample-extension",
+  "name": "mg-color-scale",
   "version": "0.0.0",
   "authors": [
     "Dan de Havilland <dan@dandehavilland.com>"
   ],
-  "description": "An example of how to extend metrics-graphics",
+  "description": "A color-scale addon for metrics-graphics.",
   "directories": {
     "test": "tests"
   },

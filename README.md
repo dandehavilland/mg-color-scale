@@ -1,28 +1,7 @@
-# mg-sample-extension
-An example of how to extend the [metrics-graphics](http://github.com/mozilla/metrics-graphics) data visualisation library.
+# mg-color-scale
+A color-scale addon for metrics-graphics. Applies to lines and areas in the line chart.
 
 **Note:** the addon system is still under heavy development. This project will currently only work with [my pending PR](https://github.com/mozilla/metrics-graphics/pull/351) for metrics-graphics.
-
-### Requirements
-
-If you're thinking of extending metrics-graphics then you should already have everything you need:
-
-- [Node.JS](http://nodejs.org/)
-- [bower](http://bower.io)
-
-
-### Getting started
-
-- `git clone git@github.com:dandehavilland/mg-sample-extension.git ./my-extension-name`
-- `bower install && npm install`
-- `npm install -g gulp`
-- `gulp serve`
-
-The sandbox is then available at:
-
-- http://localhost:4300
-
-Make your changes, update this `README.md`, `package.json` and `bower.json` to reflect your extension details, then deploy as you see fit.
 
 
 ### Testing

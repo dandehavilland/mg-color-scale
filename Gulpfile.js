@@ -20,14 +20,14 @@ var src = './src/',
   jsFiles = src + 'js/**/*.js',
   scssFiles = src + 'scss/**/*.scss';
 
-gulp.task('default', ['jshint', 'test', 'build:js']);
+gulp.task('default', ['jshint', 'build:js', 'build:css']);
 
 gulp.task('clean', function () {
   return gulp.src([dist + '*', 'tmp/*'], {read: false})
     .pipe(rimraf());
 });
 
-gulp.task('build:js', ['clean'], function () {
+gulp.task('build:js', function () {
   return gulp.src(jsFiles)
     .pipe(concat({path: filename + '.js'}))
     .pipe(umd(
@@ -64,7 +64,7 @@ gulp.task('build:js', ['clean'], function () {
 });
 
 // build css files from scss
-gulp.task('build:css', ['clean'], function () {
+gulp.task('build:css', function () {
   return gulp.src(scssFiles)
     .pipe(sass())
     .pipe(rename(filename + '.css'))

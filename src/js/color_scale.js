@@ -31,13 +31,14 @@ function colorScale(target, numIntervals, reloadColors) {
     tmpElem = container.appendChild(document.createElement('span'))
 
     tmpElem.style.display = 'none';
-    document.body.appendChild(tmpElem);
 
     tmpElem.className = 'chart-color-start';
     colorStart = getStyle(tmpElem, 'background-color');
 
     tmpElem.className = 'chart-color-end';
     colorEnd = getStyle(tmpElem, 'background-color');
+
+    container.removeChild(tmpElem);
   }
 
   return d3.scale.linear()

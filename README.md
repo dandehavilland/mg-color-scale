@@ -1,7 +1,22 @@
 # mg-color-scale
+
 A color-scale addon for metrics-graphics. Applies to lines and areas in the line chart.
 
 **Note:** the addon system is still under heavy development. This project will currently only work with [my pending PR](https://github.com/mozilla/metrics-graphics/pull/351) for metrics-graphics.
+
+### Usage
+
+Install using bower (not yet published):
+
+- `bower install dandehavilland/mg-color-scale --save`
+
+Include `dist/mg_color_scale.js` in your build, or include it in your HTML:
+
+- `<script src="bower_components/mg-color-scale/dist/mg_color_scale.js"></script>`
+
+Import the default styles from `dist/mg_color_scale.css`, or create your own:
+
+- `<link rel="stylesheet" href="bower_components/mg-color-scale/dist/mg_color_scale.css" type="text/css" />`
 
 
 ### Testing
@@ -9,6 +24,12 @@ A color-scale addon for metrics-graphics. Applies to lines and areas in the line
 - `gulp test` to run the Test'em server in continuous mode.
 - `npm test` or `gulp test-ci` for a single run, CI mode.
 
+
+### Requirements
+
+- [Node.JS](http://nodejs.org/)
+- [bower](http://bower.io) or [io.js](https://iojs.org/)
+- [metrics-graphics](http://metricsgraphicsjs.org/)
 
 ### Contributing
 

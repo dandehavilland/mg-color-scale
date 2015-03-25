@@ -1,6 +1,6 @@
 {
   "name": "mg-color-scale",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "authors": [
     "Dan de Havilland <dan@dandehavilland.com>"
   ],
@@ -22,7 +22,8 @@
     "package.json",
     "src",
     "testem.json",
-    "tests"
+    "tests",
+    "README.md"
   ],
   "devDependencies": {
     "metrics-graphics": "git://github.com/dandehavilland/metrics-graphics.git#hooks",

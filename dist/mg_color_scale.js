@@ -66,10 +66,13 @@ function generateColors(chart) {
       rgba = 'rgba('+rgb.r+','+rgb.g+','+rgb.b+','+'0.4)',
       lineId = i + 1;
 
-    jss.set(args.target + ' .mg-main-line.mg-line'+lineId+'-color', {
+    jss.set(args.target + ' .mg-line'+lineId+'-color', {
       'stroke': colorString
     });
 
+    jss.set(args.target + ' .mg-hover-line'+lineId+'-color', {
+      'fill': colorString
+    });
 
     jss.set(args.target + ' .mg-area'+lineId+'-color', {
       'fill': rgba

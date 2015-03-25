@@ -1,6 +1,7 @@
 {
   "name": "mg-color-scale",
-  "version": "0.0.0",
+  "version": "0.0.1",
+  "private": true,
   "authors": [
     "Dan de Havilland <dan@dandehavilland.com>"
   ],

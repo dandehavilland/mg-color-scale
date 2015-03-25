@@ -1,6 +1,9 @@
 # mg-color-scale
 
-A color-scale addon for metrics-graphics. Applies to lines and areas in the line chart.
+A color-scale addon for metrics-graphics. Extrapolates colors for multiple lines
+based a defined range consisting of start and end colors.
+
+Applies to lines and areas in the line chart.
 
 **Note:** the addon system is still under heavy development. This project will currently only work with [my pending PR](https://github.com/mozilla/metrics-graphics/pull/351) for metrics-graphics.
 
@@ -18,6 +21,17 @@ Import the default styles from `dist/mg_color_scale.css`, or create your own:
 
 - `<link rel="stylesheet" href="bower_components/mg-color-scale/dist/mg_color_scale.css" type="text/css" />`
 
+Enable the addon by setting `args.use_color_scale` to `true`.
+
+Set custom start and end colors:
+
+```
+.chart-color-start {
+  background-color: darkgreen; }
+
+.chart-color-end {
+  background-color: #640000; }
+```
 
 ### Testing
 

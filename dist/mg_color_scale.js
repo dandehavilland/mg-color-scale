@@ -24,7 +24,6 @@ function getStyle(elem, styleProp) {
 	return value;
 }
 
-
 var colorStart, colorEnd;
 
 function colorScale(target, numIntervals, reloadColors) {
@@ -56,27 +55,30 @@ function colorScale(target, numIntervals, reloadColors) {
 }
 
 function generateColors(chart) {
-  var args = chart.args,
-    numIntervals = args.data.length,
-    scale = colorScale(args.target, numIntervals, true);
+  var args = chart.args;
 
-  for (var i = 0 ; i < numIntervals; i++) {
-    var colorString = scale(i),
-      rgb = d3.rgb(colorString),
-      rgba = 'rgba('+rgb.r+','+rgb.g+','+rgb.b+','+'0.4)',
-      lineId = i + 1;
+  if (args.use_color_scale) {
+    var numIntervals = args.data.length,
+      scale = colorScale(args.target, numIntervals, true);
 
-    jss.set(args.target + ' .mg-line'+lineId+'-color', {
-      'stroke': colorString
-    });
+    for (var i = 0 ; i < numIntervals; i++) {
+      var colorString = scale(i),
+        rgb = d3.rgb(colorString),
+        rgba = 'rgba('+rgb.r+','+rgb.g+','+rgb.b+','+'0.4)',
+        lineId = i + 1;
 
-    jss.set(args.target + ' .mg-hover-line'+lineId+'-color', {
-      'fill': colorString
-    });
+      jss.set(args.target + ' .mg-line'+lineId+'-color', {
+        'stroke': colorString
+      });
 
-    jss.set(args.target + ' .mg-area'+lineId+'-color', {
-      'fill': rgba
-    });
+      jss.set(args.target + ' .mg-hover-line'+lineId+'-color', {
+        'fill': colorString
+      });
+
+      jss.set(args.target + ' .mg-area'+lineId+'-color', {
+        'fill': rgba
+      });
+    }
   }
 }
 
